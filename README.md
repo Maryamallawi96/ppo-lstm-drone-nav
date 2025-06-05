@@ -65,9 +65,9 @@ Learning is driven by a reward function encouraging goal-reaching and avoiding o
 
 ## 🎥 Demo Videos
 
-▶️ [Demo: PPO + LSTM in Corridor](media/Testing%20with%20path.MOV)  
+▶️  
 ▶️ [Demo: Generalization in Unseen Environment](media/Testing.MP4)
-
+ https://github.com/Maryamallawi96/ppo-lstm-drone-nav/blob/main/media/Testing%20wih%20path.MOV
 👩‍💻 Author
 Maryam Allawi
 📬 pgs.maryam.allawi@uobasrah.edu.iq
