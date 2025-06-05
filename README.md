@@ -1,3 +1,5 @@
-# ppo-lstm-drone-nav
-Memory-Augmented Reinforcement Learning for UAV Navigation using PPO-LSTM
+# PPO-LSTM Drone Navigation
+
+This project implements memory-augmented reinforcement learning for UAV navigation using PPO + LSTM in ROS/Gazebo.
+
 
