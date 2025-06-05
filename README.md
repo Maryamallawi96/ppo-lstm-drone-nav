@@ -1,12 +1,6 @@
-# PPO-LSTM Drone Navigation
-
-This project implements memory-augmented reinforcement learning for UAV navigation using PPO + LSTM in ROS/Gazebo.
-
 # 🛸 PPO-LSTM Drone Navigation
 
 This project implements **autonomous drone navigation** in a 3D indoor environment using **Deep Reinforcement Learning (PPO + LSTM)** in ROS/Gazebo. The drone navigates to a target using only LiDAR data and memory (LSTM) for decision-making in partially observable environments.
-
----
 
 ## 🧠 Features
 
@@ -16,41 +10,64 @@ This project implements **autonomous drone navigation** in a 3D indoor environme
 - ✅ Fully integrated with Gazebo, PX4 SITL, and MAVROS
 - ✅ Collision reset, OFFBOARD mode, and reward shaping
 
----
 
-## 🛠️ Setup
+## 📁 Package Name
+drone_ppolstm_nav
 
-- ROS Noetic
-- Gazebo 11
-- PX4 Autopilot (SITL)
-- `mavros`, `mavros_extras`
-- Python packages:  
-  ```bash
-  pip install stable-baselines3[extra] torch gymnasium
+## 🧭 Simulation Overview
 
-🚀 Run & Train
-Launch simulator:
+| Component         | Description                        |
+|------------------|------------------------------------|
+| Simulator         | Gazebo 11                          |
+| Flight Controller | PX4 Autopilot (SITL)               |
+| Middleware        | MAVROS (ROS Noetic)                |
+| DRL Algorithm     | PPO with LSTM (Stable-Baselines3)  |
+| Sensor            | 720° 2D LiDAR (/scan topic)      |
+| Goal              | (33, -2, 0)                         |
 
+
+## 🧠 Folder Structure
+
+drone_ppolstm_nav/
+├── launch/                       # Simulation launch files
+├── models/                       # Drone model with LiDAR
+├── scripts/                      # Training and environment code
+├── worlds/                       # Gazebo world with obstacles
+├── CMakeLists.txt
+└── package.xml
+
+⚙️ Dependencies
+Make sure the following are installed:
+PX4-Autopilot
+ROS Noetic
+Gazebo 11
+mavros, mavros_extras
+stable-baselines3, gymnasium, rospy, numpy, sensor_msgs, geometry_msgs
+Install Python packages:
+pip install stable-baselines3[extra] torch tensorboard
+
+🚀 Launching the Simulation
+1. Launch PX4 and Gazebo:
 roslaunch drone_ppolstm_nav simulation.launch
-Start MAVROS:
-
+2. Start MAVROS:
 roslaunch mavros px4.launch fcu_url:="udp://:14540@127.0.0.1:14557"
-Train PPO-LSTM agent:
-
+🧠 Training the PPO-LSTM Agent
 rosrun drone_ppolstm_nav train_lstm_recurrentppo.py
-🎯 Navigation Goal
-Start point: (0, -2, 0)
+The drone will arm, take off, switch to OFFBOARD, and navigate using LSTM.
+Learning is driven by a reward function encouraging goal-reaching and avoiding obstacles.
 
-Target goal: (33, -2, 0)
+📊 Training Results
+🟣 Performance Comparison
+🟠 Generalization to Unseen Environments
+🟢 Evaluation in Dynamic Obstacle Scenario
+🎥 Demo Video
 
-📊 Media & Results
-PPO vs PPO + LSTM
 
-Dynamic Obstacle Evaluation
 
-Testing Videos
-▶️ Testing Demo
-▶️ Unseen Environment
+
+
+
+
 
 👩‍💻 Author
 Maryam Allawi
