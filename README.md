@@ -1,7 +1,7 @@
 # 🛸 PPO-LSTM Drone Navigation
+# Memory-Augmented Reinforcement Learning for UAV Navigation using PPO-LSTM
 
-This project implements **autonomous drone navigation** in a 3D indoor environment using **Deep Reinforcement Learning (PPO + LSTM)** in ROS/Gazebo. The drone navigates to a target using only LiDAR data and memory (LSTM) for decision-making in partially observable environments.
-
+🛸 🛸 This project implements autonomous drone navigation in a 3D indoor simulated environment using Deep Reinforcement Learning (PPO + LSTM). The drone learns to navigate through obstacles toward a target using only LiDAR input, leveraging memory (LSTM) for better decision-making in partially observable environments.
 ## 🧠 Features
 
 - ✅ PPO + LSTM agent using Stable-Baselines3
@@ -60,14 +60,13 @@ Learning is driven by a reward function encouraging goal-reaching and avoiding o
 🟣 Performance Comparison
 🟠 Generalization to Unseen Environments
 🟢 Evaluation in Dynamic Obstacle Scenario
-🎥 Demo Video
 
 
 
+## 🎥 Demo Videos
 
-
-
-
+▶️ [Demo: PPO + LSTM in Corridor](media/Testing%20with%20path.MOV)  
+▶️ [Demo: Generalization in Unseen Environment](media/Testing.MP4)
 
 👩‍💻 Author
 Maryam Allawi
