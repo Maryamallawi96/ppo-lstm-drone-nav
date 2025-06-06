@@ -63,19 +63,14 @@ Learning is driven by a reward function encouraging goal-reaching and avoiding o
 
 ## 📸 Screenshots & Demo Videos
 
-
 ### 🟠 Navigation through Moving and Static Obstacles
-(media/path%20with%20obstic.jpg)
+[![Static Path](media/path%20with%20obstic.jpg)](media/path%20with%20obstic.jpg)
 
 ### 🎥 Demo: PPO-LSTM in Unseen Environment (with path)
 [![Demo Video](media/unseen%20env.jpg)](media/Testing%20unseen%20env.mp4)
 
 
-
-
 👩‍💻 Author
-
-
 Maryam Allawi
 📬 pgs.maryam.allawi@uobasrah.edu.iq
 🌐 GitHub: Maryamallawi96
