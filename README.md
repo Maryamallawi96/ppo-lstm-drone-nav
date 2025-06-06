@@ -65,8 +65,16 @@ Learning is driven by a reward function encouraging goal-reaching and avoiding o
 
 ## 🎥 Demo Videos
 ️  
-▶️ [Demo: Generalization in Unseen Environment](media/Testing.MP4)
- https://github.com/Maryamallawi96/ppo-lstm-drone-nav/blob/main/media/Testing%20wih%20path.MOV
+▶️ [Demo: Generalization in Unseen Environment](## 📸 Screenshots & Demo Videos
+
+### 🟠 Navigation through Static Obstacles
+![Static Path](media/path%20with%20obstic.jpg)
+
+### 🟢 Navigation in Unseen Environment
+![Unseen Env](media/unseen%20env.jpg)
+
+### 🎥 Demo: PPO-LSTM in Unseen Environment (with path)
+[![Demo Video](media/unseen%20env.jpg)](media/Testing%20unseen%20env.mp4)
 
 
 👩‍💻 Author
