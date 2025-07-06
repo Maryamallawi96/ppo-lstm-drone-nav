@@ -1,0 +1,21 @@
+<launch>
+  <!-- Ensure simulation time is used -->
+  <param name="use_sim_time" value="true"/>
+
+  <!-- Start PX4 SITL -->
+  <include file="$(find px4)/launch/px4.launch"/>
+
+  <!-- Start Gazebo with your custom world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find drone_ppolstm_nav)/worlds/corridor_static.world"/>
+    
+  </include>
+
+  <!-- Spawn the drone model (Iris with LiDAR, etc.) -->
+  <node name="spawn_iris" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-sdf -file $(find drone_ppolstm_nav)/models/iris.sdf -model iris -x 0 -y 0 -z 0.2"/>
+
+</launch>
+
+
+
